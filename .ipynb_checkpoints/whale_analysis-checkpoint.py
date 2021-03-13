@@ -43,7 +43,6 @@ sp500_returns.columns = ["S&P 500"]
 # Join Whale Returns, Algorithmic Returns, and the S&P 500 Returns into a single DataFrame with columns for each portfolio's returns.
 portfolio_returns = pd.concat([whale_returns, algo_returns, sp500_returns], axis=1, join='inner')
 
-
 # Plot daily returns of all portfolios
 portfolio_returns.plot(figsize = (20,10))
 
