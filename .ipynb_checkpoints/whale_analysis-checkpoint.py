@@ -124,7 +124,7 @@ my_portfolio = pd.concat([tsla_history, roku_history, fb_history], axis=1, join=
 
 
 # Reset Date index
-my_portfolio.index = my_portfolio.index.date
+my_portfolio.index = my_portfolio.index.normalize()
 
 
 # Reorganize portfolio data by having a column per symbol
