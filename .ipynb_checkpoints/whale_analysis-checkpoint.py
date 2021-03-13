@@ -44,16 +44,16 @@ sp500_returns.columns = ["S&P 500"]
 portfolio_returns = pd.concat([whale_returns, algo_returns, sp500_returns], axis=1, join='inner')
 
 # Plot daily returns of all portfolios
-portfolio_returns.plot(figsize = (20,10))
+portfolio_returns.plot(title="Daily Returns", figsize = (20,10))
 
 # Calculate cumulative returns of all portfolios
 cumulative_returns = (1 + portfolio_returns).cumprod()
 
 # Plot cumulative returns
-cumulative_returns.plot(figsize=(20,10))
+cumulative_returns.plot(title="Cumulative Returns", figsize=(20,10))
 
 # Box plot to visually show risk
-portfolio_returns.plot(kind='box', figsize=(20,10))
+portfolio_returns.plot(kind='box',title="Portfolio Risk", figsize=(20,10))
 
 # Calculate the daily standard deviations of all portfolios
 portfolio_std = pd.DataFrame(portfolio_returns.std())
@@ -73,7 +73,7 @@ ann_std.columns = ['Annualized STD']
 portfolio_rolling_std = portfolio_returns.rolling(window=21).std()
 
 # Plot the rolling standard deviation
-portfolio_rolling_std['S&P 500'].plot(title='21-Day Rolling', figsize=(20,10))
+portfolio_rolling_std['S&P 500'].plot(title='21-Day Rolling Standard Deviation', figsize=(20,10))
 
 # Calculate the correlation
 correlation = portfolio_returns.corr()
@@ -101,7 +101,7 @@ rolling_beta.plot(title='Rolling 60-Day Beta of BERKSHIRE HATHAWAY INC', figsize
 exponential_ma = portfolio_returns.ewm(halflife=21, adjust=False).mean()
 
 # plot ewm
-exponential_ma.plot(figsize=(20,10))
+exponential_ma.plot(title="21-day Exponential Moving Average",figsize=(20,10))
 
 
 # Annualized Sharpe Ratios
@@ -164,7 +164,7 @@ combined_ann_std = combined_returns.std() * np.sqrt(252)
 combined_rolling_std = combined_returns.rolling(window=21).std()
 
 # Plot rolling standard deviation
-combined_rolling_std.plot(figsize=(20,10))
+combined_rolling_std.plot(title="Combined 21-day rolling Standard Deviation", figsize=(20,10))
 
 # Calculate and plot the correlation
 combined_correlation = combined_returns.corr()

@@ -9,4 +9,4 @@ This notebook was created to analyze and visualize the major metrics of various 
 
 The historical data of these portfolios are present as CSVs and are located under 'Resources'. Some of these portfolios represent the portfolios of famous "whale" investors like Warren Buffett, and some from the big hedge and mutual funds. The algo_returns portfolios are portfolios formualted by algorithmic trading strategies. 
 
-The second portion of this notebook is set up to create and analyze a custom portfolio of stocks and compare its performance to that of the other portfolios, as well as the larger market [(S&P 500 Index)](https://en.wikipedia.org/wiki/S%26P_500))
+The second portion of this notebook is set up to create and analyze a custom portfolio of stocks and compare its performance to that of the other portfolios, as well as the larger market [(S&P 500 Index)](https://en.wikipedia.org/wiki/S%26P_500)
