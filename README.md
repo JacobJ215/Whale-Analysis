@@ -1,8 +1,9 @@
 # Unit 4 Homework Assignment: A Whale Off the Port(folio)
 
-## About 
 
 ![Cumulative Returns](Cumulative_Returns_of_Multiple_Porfolios.png)
+
+## About 
 
 This notebook was created to analyze and visualize the major metrics of various portfolios. These metrics include volatility, returns, risk and Sharpe ratios. Through our analyis we can use our notebook to determine which portfolio outperformed the others. 
 
